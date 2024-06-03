@@ -1,5 +1,7 @@
 import { promises as fs } from 'fs';
-import { PATH_DB } from '../constants/contacts.js';
+import { join } from 'path';
+
+const PATH_DB = join(__dirname, '../db/db.json');
 
 export const removeAllContacts = async () => {
     try {
